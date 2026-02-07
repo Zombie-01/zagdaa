@@ -198,7 +198,7 @@
           {
             name: "Охин",
             role: "Зохион байгуулагч",
-            photo: "/images/",
+            photo: "/images/Joohnoo egch.PNG",
           },
         ],
         gallery: [
@@ -245,12 +245,35 @@
         {
           year: 2025,
           title: "2025 ОНЫ БАРИЛДААН",
-          description: "Гуравдугаар барилдаан амжилттай боллоо.",
+          description: "Анхны барилдаан амжилттай боллоо.",
+          gallery: [
+            {
+              url: "/images/Turuu buh.PNG",
+              caption: "Түрүү бөх",
+            },
+            {
+              url: "/images/Nomin-Erdene.PNG",
+              caption: "Үзүүрэлсэн бөх",
+            },
+            {
+              url: "/images/shuvrgursun buh.jpg",
+              caption: "Шөвгөрсөн бөх",
+            },
+            {
+              url: "/images/shuvgursun buh2.jpg",
+              caption: "Шөвгөрсөн бөх",
+            },
+            {
+              url: "/images/482000668_588339750873852_6155746886901261268_n.jpg",
+              caption: "",
+            },
+          ],
         },
         {
           year: 2026,
           title: "2026 ОНЫ БАРИЛДААН",
-          description: "Дөрөвдүгээр барилдаан.",
+          description: "Хоёр дахь Дөрөвдүгээр барилдаан.",
+          gallery: [],
         },
       ];
 
@@ -715,7 +738,7 @@
                   <div
                     className="absolute inset-0 bg-[#061c6b] z-0"
                     style={{
-                      backgroundImage: `linear-gradient(rgba(6,28,107,0.7), rgba(6,28,107,0.95)), url('https://picsum.photos/1920/1080?wrestling&blur=2')`,
+                      backgroundImage: `linear-gradient(rgba(6,28,107,0.7), rgba(6,28,107,0.95)), url('/images/hero.jpg')`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}
@@ -799,6 +822,24 @@
                   lang={lang}
                   onFamilySelect={() => setView("family")}
                 />
+                <div className="py-40 flex-col bg-[#e8eef1] px-6 flex justify-center items-center">
+                  <h2 className="text-4xl md:text-6xl font-black text-[#061c6b] uppercase tracking-tighter mb-24">
+                    2026 ОНЫ БАРИЛДААНЫ ЗАРЛАЛ
+                  </h2>
+                  <div className="relative bg-[#e8eef1] rounded-[60px] overflow-hidden shadow-[0_50px_100px_rgba(6,28,107,0.15)] z-10 border-[16px] border-white transform hover:-rotate-1 transition-transform duration-700">
+                    {/* Aspect 3:4 wrapper */}
+                    <div className=" aspect-video w-[640px] h-[360px] md:w-[960px] md:h-[540px]">
+                      <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/65wGszrF9_c"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                </div>
 
                 {/* Wrestler Grid */}
                 <section className="py-40 bg-[#e8eef1] px-6">
@@ -929,6 +970,23 @@
                     <span className="text-white/20 font-black text-2xl uppercase tracking-[0.5em]">
                       Тэмцээний бичлэг удахгүй
                     </span>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    {archiveData.gallery.map((g, i) => (
+                      <div
+                        key={i}
+                        className="relative aspect-square rounded-[60px] overflow-hidden group shadow-2xl">
+                        <img
+                          src={g.url}
+                          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-125"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#061c6b] to-transparent opacity-0 group-hover:opacity-90 transition-all p-12 flex items-end">
+                          <p className="text-white font-black text-xl uppercase tracking-tighter text-left">
+                            {g.caption}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
