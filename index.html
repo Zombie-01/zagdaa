@@ -822,8 +822,8 @@
                   lang={lang}
                   onFamilySelect={() => setView("family")}
                 />
-                <div className="py-40 flex-col bg-[#e8eef1] px-6 flex justify-center items-center">
-                  <h2 className="text-4xl md:text-6xl font-black text-[#061c6b] uppercase tracking-tighter mb-24">
+                <div className="py-40  flex-col bg-[#e8eef1] px-6 flex gap-20 justify-center items-center">
+                  <h2 className="text-4xl md:text-6xl font-black text-[#061c6b] uppercase tracking-tighter ">
                     2026 ОНЫ БАРИЛДААНЫ ЗАРЛАЛ
                   </h2>
                   <div className="relative bg-[#e8eef1] rounded-[60px] overflow-hidden shadow-[0_50px_100px_rgba(6,28,107,0.15)] z-10 border-[16px] border-white transform hover:-rotate-1 transition-transform duration-700">
@@ -838,6 +838,12 @@
                         allowFullScreen
                       />
                     </div>
+                  </div>
+                  <div className="bg-white p-8 rounded-[48px] shadow-sm hover:shadow-xl transition-all">
+                    <img
+                      src="/images/banner.jpg"
+                      className="w-full aspect- object-cover rounded-[32px]  grayscale hover:grayscale-0 transition-all"
+                    />
                   </div>
                 </div>
 
@@ -925,7 +931,7 @@
                         className="bg-white p-8 rounded-[48px] shadow-sm hover:shadow-xl transition-all">
                         <img
                           src={c.photo}
-                          className="w-full aspect-video object-cover rounded-[32px] mb-8 grayscale hover:grayscale-0 transition-all"
+                          className="w-full aspect- object-cover rounded-[32px] mb-8 grayscale hover:grayscale-0 transition-all"
                         />
                         <h4 className="text-xl font-black text-[#061c6b] uppercase">
                           {c.name}
